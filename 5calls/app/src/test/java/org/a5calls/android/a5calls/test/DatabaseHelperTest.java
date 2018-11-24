@@ -1,16 +1,16 @@
-package org.a5calls.android.a5calls;
+package org.a5calls.android.a5calls.test;
 
 import org.a5calls.android.a5calls.model.DatabaseHelper;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Unit tests for DatabaseHelper.
  */
 public class DatabaseHelperTest {
     @Test
-    public void sanitizesStrings() throws Exception {
+    public void testSanitizesStrings() {
         assertEquals("TX-BetoO''Rourke", DatabaseHelper.sanitizeContactId("TX-BetoO'Rourke"));
         assertEquals("cats", DatabaseHelper.sanitizeContactId("cats"));
         assertEquals("cat''s", DatabaseHelper.sanitizeContactId("cat's"));

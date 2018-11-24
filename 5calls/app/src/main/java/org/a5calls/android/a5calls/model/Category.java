@@ -13,6 +13,10 @@ public class Category implements Parcelable {
         name = in.readString();
     }
 
+    public Category(String name) {
+        this.name = name;
+    }
+
     @Override
     public int describeContents() {
         return 0;

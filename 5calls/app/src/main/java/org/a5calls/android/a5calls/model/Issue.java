@@ -17,6 +17,19 @@ public class Issue implements Parcelable {
     public String link;
     public String linkTitle;
 
+    public Issue(String id, String name, String reason, String script, boolean inactive, String link, String linkTitle, Contact[] contacts, List<Outcome> outcomeModels, Category[] categories) {
+        this.id = id;
+        this.name = name;
+        this.reason = reason;
+        this.script = script;
+        this.inactive = inactive;
+        this.link = link;
+        this.linkTitle = linkTitle;
+        this.contacts = contacts;
+        this.outcomeModels = outcomeModels;
+        this.categories = categories;
+    }
+
     public Contact[] contacts;
     public List<Outcome> outcomeModels;
     public Category[] categories;

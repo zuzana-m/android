@@ -42,6 +42,18 @@ public class Contact implements Parcelable {
         }
     };
 
+    public Contact(String id, String name, String phone, String photoURL, String party, String state, String reason, String area, FieldOffice[] field_offices) {
+        this.id = id;
+        this.name = name;
+        this.phone = phone;
+        this.photoURL = photoURL;
+        this.party = party;
+        this.state = state;
+        this.reason = reason;
+        this.area = area;
+        this.field_offices = field_offices;
+    }
+
     @Override
     public int describeContents() {
         return 0;

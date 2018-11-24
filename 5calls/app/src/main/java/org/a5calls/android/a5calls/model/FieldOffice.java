@@ -27,6 +27,11 @@ public class FieldOffice implements Parcelable {
         }
     };
 
+    public FieldOffice(String city, String phone) {
+        this.city = city;
+        this.phone = phone;
+    }
+
     @Override
     public int describeContents() {
         return 0;
