@@ -20,7 +20,7 @@ public class FieldOfficeModelTest {
         parcel.setDataPosition(0);
         FieldOffice createdFromParcel = FieldOffice.CREATOR.createFromParcel(parcel);
 
-        Assert.assertThat(createdFromParcel.city, is("city"));
-        Assert.assertThat(createdFromParcel.phone, is("phone"));
+        Assert.assertThat(createdFromParcel.city, is(fieldOffice.city));
+        Assert.assertThat(createdFromParcel.phone, is(fieldOffice.phone));
     }
 }

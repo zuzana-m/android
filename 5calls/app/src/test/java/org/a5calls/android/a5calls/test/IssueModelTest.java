@@ -36,13 +36,13 @@ public class IssueModelTest {
 
         Issue createdFromParcel = Issue.CREATOR.createFromParcel(parcel);
 
-        Assert.assertThat(createdFromParcel.reason, is("reason"));
-        Assert.assertThat(createdFromParcel.id, is("id"));
-        Assert.assertThat(createdFromParcel.link, is("link"));
-        Assert.assertThat(createdFromParcel.linkTitle, is("linkTitle"));
-        Assert.assertThat(createdFromParcel.name, is("name"));
-        Assert.assertThat(createdFromParcel.script, is("script"));
-        Assert.assertThat(createdFromParcel.inactive, is(true));
+        Assert.assertThat(createdFromParcel.reason, is(issue.reason));
+        Assert.assertThat(createdFromParcel.id, is(issue.id));
+        Assert.assertThat(createdFromParcel.link, is(issue.link));
+        Assert.assertThat(createdFromParcel.linkTitle, is(issue.linkTitle));
+        Assert.assertThat(createdFromParcel.name, is(issue.name));
+        Assert.assertThat(createdFromParcel.script, is(issue.script));
+        Assert.assertThat(createdFromParcel.inactive, is(issue.inactive));
         Assert.assertThat(createdFromParcel.categories[0].name, is(categories[0].name));
         Assert.assertThat(createdFromParcel.outcomeModels.get(0).label, is(outcomesList.get(0).label));
         Assert.assertThat(createdFromParcel.contacts[0].id, is(contacts[0].id));

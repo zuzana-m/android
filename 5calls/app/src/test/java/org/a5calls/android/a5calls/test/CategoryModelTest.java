@@ -18,6 +18,6 @@ public class CategoryModelTest {
         category.writeToParcel(parcel, 0);
         parcel.setDataPosition(0);
         Category createdFromParcel = Category.CREATOR.createFromParcel(parcel);
-        Assert.assertThat(createdFromParcel.name, is("name"));
+        Assert.assertThat(createdFromParcel.name, is(category.name));
     }
 }

@@ -23,14 +23,14 @@ public class ContactModelTest {
         parcel.setDataPosition(0);
         Contact createdFromParcel = Contact.CREATOR.createFromParcel(parcel);
 
-        Assert.assertThat(createdFromParcel.reason, is("reason"));
-        Assert.assertThat(createdFromParcel.area, is("area"));
-        Assert.assertThat(createdFromParcel.id, is("id"));
-        Assert.assertThat(createdFromParcel.name, is("name"));
-        Assert.assertThat(createdFromParcel.party, is("party"));
-        Assert.assertThat(createdFromParcel.phone, is("phone"));
-        Assert.assertThat(createdFromParcel.photoURL, is("photoURL"));
-        Assert.assertThat(createdFromParcel.state, is("state"));
+        Assert.assertThat(createdFromParcel.reason, is(contact.reason));
+        Assert.assertThat(createdFromParcel.area, is(contact.area));
+        Assert.assertThat(createdFromParcel.id, is(contact.id));
+        Assert.assertThat(createdFromParcel.name, is(contact.name));
+        Assert.assertThat(createdFromParcel.party, is(contact.party));
+        Assert.assertThat(createdFromParcel.phone, is(contact.phone));
+        Assert.assertThat(createdFromParcel.photoURL, is(contact.photoURL));
+        Assert.assertThat(createdFromParcel.state, is(contact.state));
         Assert.assertThat(createdFromParcel.field_offices[0].city, is(fieldOffices[0].city));
     }
 }

@@ -27,8 +27,8 @@ public class OutcomeModelTest {
 
         Outcome createdFromParcel = Outcome.CREATOR.createFromParcel(parcel);
 
-        Assert.assertThat(createdFromParcel.label, is("label"));
-        Assert.assertThat(createdFromParcel.status, is(Outcome.Status.CONTACT));
+        Assert.assertThat(createdFromParcel.label, is(outcome.label));
+        Assert.assertThat(createdFromParcel.status, is(outcome.status));
     }
 
     @Test
