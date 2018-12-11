@@ -226,6 +226,7 @@ public class StatsActivity extends AppCompatActivity {
         pieChart.getLegend().setEnabled(false);
         pieChart.setDescription(new Description());
         pieChart.getDescription().setText("");
+        pieChart.setTouchEnabled(false);
         pieChart.invalidate();
     }
 

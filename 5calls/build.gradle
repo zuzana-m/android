@@ -1,5 +1,4 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     repositories {
         jcenter()
@@ -11,10 +10,15 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
         classpath 'com.google.gms:google-services:3.0.0'
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.0.1"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+}
+
+plugins {
+    id 'org.sonarqube' version '2.6.2'
 }
 
 allprojects {
@@ -27,6 +31,14 @@ allprojects {
         }
         // For accessing MPAndroidChart library.
         maven { url 'https://jitpack.io' }
+    }
+}
+
+sonarqube {
+    properties {
+        property 'sonar.language', 'java'
+        property 'sonar.sources', 'src/main/java/org/a5calls/android/a5calls'
+        property 'sonar.tests', 'src/test/java/org/a5calls/android/a5calls/test'
     }
 }
 
